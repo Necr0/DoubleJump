@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[31,)"
-issueTrackerURL="http://my.issue.tracker/"
+issueTrackerURL="https://github.com/Necr0/DoubleJump/issues"
 
 [[mods]] #mandatory
 modId="doublejump"
 version="${file.jarVersion}"
 displayName="Double Jump"
 # updateJSONURL="http://myurl.me/"
-displayURL="http://example.com/"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/coyotelib-double-jump"
 logoFile="doublejump.png" #optional
 # credits="Thanks for this example mod goes to Java" #optional
 authors="Necro"
