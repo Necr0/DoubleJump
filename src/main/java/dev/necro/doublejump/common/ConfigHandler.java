@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package dev.necro.doublejump.common;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;

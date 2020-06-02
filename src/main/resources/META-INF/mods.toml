@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="http://my.issue.tracker/"
+
+[[mods]] #mandatory
+modId="doublejump"
+version="${file.jarVersion}"
+displayName="Double Jump"
+# updateJSONURL="http://myurl.me/"
+displayURL="http://example.com/"
+logoFile="doublejump.png" #optional
+# credits="Thanks for this example mod goes to Java" #optional
+authors="Necro"
+description='''
+A mod allowing players to jump midair once (or more times depending on configuration).
+It also gives them a bit of coyote time allowing them to jump during a short time frame after walking of a platform despite not being on ground.
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.doublejump]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.doublejump]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.doublejump]]
+    modId="coyotelib"
+    mandatory=true
+    versionRange="[1.1,)"
+    ordering="AFTER"
+    side="BOTH"
