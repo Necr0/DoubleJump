@@ -6,7 +6,7 @@ issueTrackerURL="https://github.com/Necr0/DoubleJump/issues"
 modId="doublejump"
 version="${file.jarVersion}"
 displayName="Double Jump"
-# updateJSONURL="http://myurl.me/"
+updateJSONURL="https://gist.githubusercontent.com/Necr0/5815175ce26970f4beb692040c836dbd/raw/doublejump_update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/coyotelib-double-jump"
 logoFile="doublejump.png" #optional
 # credits="Thanks for this example mod goes to Java" #optional
@@ -31,6 +31,6 @@ It also gives them a bit of coyote time allowing them to jump during a short tim
 [[dependencies.doublejump]]
     modId="coyotelib"
     mandatory=true
-    versionRange="[1.1,)"
+    versionRange="[1.3,)"
     ordering="AFTER"
     side="BOTH"

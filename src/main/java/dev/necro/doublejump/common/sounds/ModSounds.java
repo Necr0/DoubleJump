@@ -1,4 +1,4 @@
-package dev.necro.doublejump.common;
+package dev.necro.doublejump.common.sounds;
 
 import dev.necro.doublejump.DoubleJump;
 import net.minecraft.util.ResourceLocation;

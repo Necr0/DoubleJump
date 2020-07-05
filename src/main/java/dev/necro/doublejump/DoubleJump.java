@@ -1,6 +1,6 @@
 package dev.necro.doublejump;
 
-import dev.necro.doublejump.common.ConfigHandler;
+import dev.necro.doublejump.common.config.ConfigHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -11,6 +11,6 @@ public class DoubleJump
     public static final String MODID = "doublejump";
 
     public DoubleJump() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.COMMON_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigHandler.SERVER_SPEC);
     }
 }

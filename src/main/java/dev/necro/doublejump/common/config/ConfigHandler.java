@@ -1,8 +1,11 @@
-package dev.necro.doublejump.common;
+package dev.necro.doublejump.common.config;
 
+import dev.necro.doublejump.DoubleJump;
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.fml.common.Mod;
 import org.apache.commons.lang3.tuple.Pair;
 
+@Mod.EventBusSubscriber(modid = DoubleJump.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ConfigHandler {
 
     public enum CalculationMode {
@@ -11,7 +14,7 @@ public class ConfigHandler {
         MAX;
     }
 
-    public static class Common {
+    public static class Server {
         public final ForgeConfigSpec.IntValue jumps_count;
         public final ForgeConfigSpec.EnumValue<CalculationMode> jumps_calculation_mode;
         public final ForgeConfigSpec.IntValue coyote_time_ticks;
@@ -20,7 +23,7 @@ public class ConfigHandler {
         public final ForgeConfigSpec.BooleanValue jumps_play_sound;
         public final ForgeConfigSpec.BooleanValue jumps_spawn_particle;
 
-        public Common(ForgeConfigSpec.Builder builder) {
+        public Server(ForgeConfigSpec.Builder builder) {
             jumps_count = builder
                     .comment("The number of mid air jumps any player can do. 1 is double jump, 2 is a triple jump, 3 is a quadruple jump, and so on.")
                     .defineInRange("jumps.count",1,0,Integer.MAX_VALUE);
@@ -43,11 +46,11 @@ public class ConfigHandler {
 
     }
 
-    public static final Common COMMON;
-    public static final ForgeConfigSpec COMMON_SPEC;
+    public static final Server SERVER;
+    public static final ForgeConfigSpec SERVER_SPEC;
     static {
-        final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Common::new);
-        COMMON_SPEC = specPair.getRight();
-        COMMON = specPair.getLeft();
+        final Pair<Server, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Server::new);
+        SERVER_SPEC = specPair.getRight();
+        SERVER = specPair.getLeft();
     }
 }
